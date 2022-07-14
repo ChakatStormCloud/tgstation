@@ -48,6 +48,9 @@
 		// zombies)
 		return
 
+	if(iszombie(target)) //don't reinfect a zombie.
+		return
+
 	// spaceacillin has a 75% chance to block infection
 	if(istype(target) && target.reagents.has_reagent(/datum/reagent/medicine/spaceacillin) && prob(75))
 		return
